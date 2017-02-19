@@ -1,15 +1,15 @@
+#!/usr/bin/env python
 import bottle
+from bottle import route, run, default_app, static_file
 
-app = bottle.Bottle()
-
-@app.route('/')
+@route('/')
 def home_page():
 #	return "Hello"
-	return bottle.static_file('index.html', root='./views')
+	return static_file('index.html', root='/var/www/myapp/views')
 
-@app.route('/static/<filepath:path>')
+@route('/static/<filepath:path>')
 def static(filepath):
-	return bottle.static_file(filepath, root='./static')
+	return static_file(filepath, root='/var/www/myapp/static')
 
 class StripPathMiddleware(object):
     '''
@@ -22,9 +22,8 @@ class StripPathMiddleware(object):
         return self.a(e, h)
 
 if __name__ == '__main__':
-    bottle.debug(True)
-    bottle.run(app=StripPathMiddleware(app),
+    bottle.run(app=StripPathMiddleware(default_app()),
                host='0.0.0.0',
-               port=8080)
-
-bottle.run(app, host='0.0.0.0', port=8080)
+               port=8081)
+else:
+	app = application = default_app()
