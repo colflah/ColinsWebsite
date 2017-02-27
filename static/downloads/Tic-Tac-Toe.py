@@ -107,53 +107,55 @@ class simplegui_tk(tkinter.Tk):
 		if self.button1['text']=="X" and self.button2['text']=="X" and self.button3['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button1['text']=="O" and self.button2['text']=="O" and self.button3['text']=="O":
+		elif self.button1['text']=="O" and self.button2['text']=="O" and self.button3['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame() 
-		if self.button4['text']=="X" and self.button5['text']=="X" and self.button6['text']=="X":
+		elif self.button4['text']=="X" and self.button5['text']=="X" and self.button6['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame() 
-		if self.button4['text']=="O" and self.button5['text']=="O" and self.button6['text']=="O":
+		elif self.button4['text']=="O" and self.button5['text']=="O" and self.button6['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
-		if self.button7['text']=="X" and self.button8['text']=="X" and self.button9['text']=="X":
+		elif self.button7['text']=="X" and self.button8['text']=="X" and self.button9['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button7['text']=="O" and self.button8['text']=="O" and self.button9['text']=="O":
+		elif self.button7['text']=="O" and self.button8['text']=="O" and self.button9['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
 
-		if self.button1['text']=="X" and self.button4['text']=="X" and self.button7['text']=="X":
+		elif self.button1['text']=="X" and self.button4['text']=="X" and self.button7['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button1['text']=="O" and self.button4['text']=="O" and self.button7['text']=="O":
+		elif self.button1['text']=="O" and self.button4['text']=="O" and self.button7['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
-		if self.button2['text']=="X" and self.button5['text']=="X" and self.button8['text']=="X":
+		elif self.button2['text']=="X" and self.button5['text']=="X" and self.button8['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button2['text']=="O" and self.button5['text']=="O" and self.button8['text']=="O":
+		elif self.button2['text']=="O" and self.button5['text']=="O" and self.button8['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
-		if self.button3['text']=="X" and self.button6['text']=="X" and self.button9['text']=="X":
+		elif self.button3['text']=="X" and self.button6['text']=="X" and self.button9['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button3['text']=="O" and self.button6['text']=="O" and self.button9['text']=="O":
+		elif self.button3['text']=="O" and self.button6['text']=="O" and self.button9['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
 
-		if self.button1['text']=="X" and self.button5['text']=="X" and self.button9['text']=="X":
+		elif self.button1['text']=="X" and self.button5['text']=="X" and self.button9['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button1['text']=="O" and self.button5['text']=="O" and self.button9['text']=="O":
+		elif self.button1['text']=="O" and self.button5['text']=="O" and self.button9['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
-		if self.button3['text']=="X" and self.button5['text']=="X" and self.button7['text']=="X":
+		elif self.button3['text']=="X" and self.button5['text']=="X" and self.button7['text']=="X":
 			self.winner = self.playerOneName
 			self.endGame()
-		if self.button3['text']=="O" and self.button5['text']=="O" and self.button7['text']=="O":
+		elif self.button3['text']=="O" and self.button5['text']=="O" and self.button7['text']=="O":
 			self.winner = self.playerTwoName
 			self.endGame()
+		elif 
+
 		# If winner is found, set self.winner to winner letter and then run self.endGame()
 
 	def endGame(self):
