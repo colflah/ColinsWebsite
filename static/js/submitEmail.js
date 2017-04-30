@@ -7,8 +7,9 @@ $(function() {
 			$("label#email_error").show();
 			$("input#email").focus();
 			return false;
-		} /*
-		//alert(email);return false;
+		} 
+		alert(email);return false;
+		/*
 		$.ajax({
 		  type: "POST",
 		  url: "/mailinglist",
