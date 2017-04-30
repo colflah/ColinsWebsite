@@ -15,8 +15,9 @@ $(function() {
 		  url: "/mailinglist",
 		  data: 'email='+email,
 		  success: function() {
-		    $('#email_div').html('<div id="emailSubmitted"></div>');
-		    $("#emailSubmitted").html('<p class="black"> Email submitted. Thank you!</p>').hide().fadeIn(1500);
+		  	$('div#email_div').html('<div>Hi</div>');
+		    //$('div#email_div').html('<div id="emailSubmitted"></div>');
+		    //$("div#emailSubmitted").html('<p class="black"> Email submitted. Thank you!</p>').hide().fadeIn(1500);
 	  	  }
 		});
 	});
