@@ -4,7 +4,7 @@ $(function() {
 		$("label#email_error").hide();
 		var email =  $("input#email").val();
 		if (email == "Enter Email."|| email == "") {
-			$("label#email_error").hide();
+			$("label#email_error").show();
 			$("input#email").focus();
 			return false;
 		} /*
