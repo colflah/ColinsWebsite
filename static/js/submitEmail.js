@@ -13,8 +13,8 @@ $(function() {
 		$.ajax({
 		  type: "POST",
 		  url: "/mailinglist",
-		  data: 'email='+email,
-		  success: function() {
+		  data: 'email='+$("input#email").val(),
+		  success: function () {
 		  	$('div#email_div').html('<div>Hi</div>');
 		    //$('div#email_div').html('<div id="emailSubmitted"></div>');
 		    //$("div#emailSubmitted").html('<p class="black"> Email submitted. Thank you!</p>').hide().fadeIn(1500);
