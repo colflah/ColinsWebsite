@@ -244,13 +244,12 @@
             <br />
             
             <div class="row">
-              <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" id="email_div">
-                <form role="form" name="email_form" action="">
+              <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <form role="form" action="/mailinglist" method="post">
                   <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email.">
-                    <label class="black error" for="name" id="email_error"> This field is required.</label>
-		  </div>
-                  <button type="submit" name="submit_email" class="btn btn-secondary btn-lg" id="submit_email">Add Me To List</button>
+                    <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                  </div>
+                  <button type="submit" class="btn btn-secondary btn-lg ">Add Me To List</button>
                 </form>
               </div>
             </div><!--End Form row-->
@@ -313,7 +312,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="static/js/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="static/js/submitEmail.js" type="text/javascript"></script>
     <script src="static/js/wow.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/main.js"></script>

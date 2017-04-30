@@ -10,7 +10,7 @@ import arrow
 @route('/')
 def home_page():
 #	return "Hello"
-	return static_file('indexold.html', root='/var/www/myapp/views')
+	return static_file('index.html', root='/var/www/myapp/views')
 
 @route('/static/<filepath:path>')
 def static(filepath):
@@ -24,7 +24,7 @@ def add_email():
 	collection = db['emailslist']
 	collection.insert_one({"email":email, "insert_date":arrow.utcnow().to('US/Pacific').format('YYYY-MM-DD HH:mm:ss ZZ')})
 	# open('/var/www/myapp/write.txt','a').write("hi").close()
-	return static_file('indexold.html', root='/var/www/myapp/views')
+	# return static_file('index.html', root='/var/www/myapp/views')
 
 
 class StripPathMiddleware(object):
