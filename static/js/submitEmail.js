@@ -1,6 +1,7 @@
 $(function() {
 	$("label#email_error").hide();
-	$("button#submit_email").click(function () {
+	$("button#submit_email").click(function (event) {
+		event.preventDefault();
 		$("label#email_error").hide();
 		var email =  $("input#email").val();
 		if (email == "Enter Email."|| email == "") {
