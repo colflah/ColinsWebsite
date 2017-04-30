@@ -3,8 +3,8 @@ $(function() {
 	$("button#submit_email").click(function () {
 		$("label#email_error").hide();
 		var email =  $("input#email").val();
-		if email == ("Enter Email."||"") {
-//			$("label#email_error").show();
+		if (email == "Enter Email."|| email == "") {
+			$("label#email_error").hide();
 			$("input#email").focus();
 			return false;
 		} /*
