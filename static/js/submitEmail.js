@@ -9,11 +9,11 @@ $(function() {
 			return false;
 		} 
 		//alert(email);return false;
-		
+		payload = 'email='+$("input#email").val();
 		$.ajax({
 		  type: "POST",
 		  url: "/mailinglist",
-		  data: 'email='+$("input#email").val(),
+		  data: payload,
 		  success: function () {
 		  	$('div#email_div').html('<div>Hi</div>');
 		    //$('div#email_div').html('<div id="emailSubmitted"></div>');
