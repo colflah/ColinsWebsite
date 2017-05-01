@@ -3,18 +3,20 @@ import bottle
 from bottle import route, run, default_app, static_file
 import pymongo
 import arrow
+import os
 
 #open('/var/www/myapp/write.txt','a').write("app.py runs2").close()
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 @route('/home')
 @route('/')
 def home_page():
 #	return "Hello"
-	return static_file('index.html', root='/var/www/myapp/views')
+	return static_file('index.html', root=dir_path+'/views')
 
 @route('/static/<filepath:path>')
 def static(filepath):
-	return static_file(filepath, root='/var/www/myapp/static')
+	return static_file(filepath, root=dir_path+'/static')
 
 @route('/mailinglist', method='POST')
 def add_email():
