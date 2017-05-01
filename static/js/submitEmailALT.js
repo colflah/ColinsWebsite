@@ -17,8 +17,13 @@ $(function() {
 		  data: payload,
 		  success: function () {
 		  	//$('div#email_div').empty().html('Hi');
-		     $('div#email_div').empty().html('<div id="emailSubmitted"></div>');
-		     $("div#emailSubmitted").html('<p class="black"> Email submitted. Thank you!</p>').hide().fadeIn(1500);
+		    $('div#email_div').fadeOut(100, function () {
+			$("#email_error").hide();
+			$("#submit_email").hide();
+			$("div#input_div").empty().html('<div id="emailSubmitted"></div>');
+			$("div#email_div").show();
+    		        $("div#emailSubmitted").html('<p class="black"> Email submitted. Thank you!</p>').hide().fadeIn(1500);
+		    });
 	  	  }
 		});
 	});
